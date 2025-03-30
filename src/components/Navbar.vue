@@ -11,6 +11,7 @@ import {
 } from '@headlessui/vue'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { RouterLink, useRoute } from 'vue-router'
+import router from '@/router'
 
 const navigation = [
   { name: 'Upis', to: '/upis', current: true },
@@ -18,6 +19,14 @@ const navigation = [
   { name: 'Cijene', to: '/cijene', current: false },
   { name: 'O nama', to: '/about', current: false },
 ]
+const adminPass = 'alaudin'
+const enterPass = () => {
+  var temp = prompt('Unesite šifru:')
+  if (temp === adminPass) {
+    sessionStorage.setItem('isAuthenticated', 'true')
+    router.push('/admin')
+  }
+}
 </script>
 
 <template class="absolute">
@@ -64,8 +73,9 @@ const navigation = [
           <!-- Profile dropdown -->
           <Menu as="div" class="relative ml-3">
             <div>
-              <MenuButton
+              <button
                 class="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden"
+                @click="enterPass"
               >
                 <span class="absolute -inset-1.5" />
                 <span class="sr-only">Open user menu</span>
@@ -83,9 +93,9 @@ const navigation = [
                     d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
                   />
                 </svg>
-              </MenuButton>
+              </button>
             </div>
-            <transition
+            <!-- <transition
               enter-active-class="transition ease-out duration-100"
               enter-from-class="transform opacity-0 scale-95"
               enter-to-class="transform opacity-100 scale-100"
@@ -96,38 +106,14 @@ const navigation = [
               <MenuItems
                 class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 focus:outline-hidden"
               >
-                <MenuItem v-slot="{ active }">
-                  <a
-                    href="#"
-                    :class="[
-                      active ? 'bg-gray-100 outline-hidden' : '',
-                      'block px-4 py-2 text-sm text-gray-700',
-                    ]"
-                    >Your Profile</a
-                  >
+                <MenuItem>
+                  <input type="password" placeholder="Enter password:" />
                 </MenuItem>
-                <MenuItem v-slot="{ active }">
-                  <a
-                    href="#"
-                    :class="[
-                      active ? 'bg-gray-100 outline-hidden' : '',
-                      'block px-4 py-2 text-sm text-gray-700',
-                    ]"
-                    >Settings</a
-                  >
-                </MenuItem>
-                <MenuItem v-slot="{ active }">
-                  <a
-                    href="#"
-                    :class="[
-                      active ? 'bg-gray-100 outline-hidden' : '',
-                      'block px-4 py-2 text-sm text-gray-700',
-                    ]"
-                    >Sign out</a
-                  >
-                </MenuItem>
+                <MenuItem>
+                  <button>Login</button>
+                </MenuItem> -
               </MenuItems>
-            </transition>
+            </transition> -->
           </Menu>
         </div>
       </div>

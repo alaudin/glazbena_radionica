@@ -39,8 +39,18 @@ const router = createRouter({
       path: '/admin',
       name: 'admin',
       component: AdminView,
+
+      meta: { requiresAuth: true },
     },
   ],
+})
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = sessionStorage.getItem('isAuthenticated') === 'true'
+  if (to.meta.requiresAuth && !isAuthenticated) {
+    next('')
+  } else {
+    next()
+  }
 })
 
 export default router
