@@ -41,9 +41,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="h-screen flex flex-col">
-    <div class="h-full relative w-full m-auto overflow-auto">
-      <div class="flex mx-auto relative max-w-7xl h-1/2 m-auto overflow-clip">
+  <div class="h-full max-w-7xl flex flex-col m-auto">
+    <div class="relative w-full mx-auto overflow-hidden">
+      <div class="flex relative max-w-7xl pb-[56.25%] m-auto">
         <span class="text-white font-bold text-3xl w-xl z-11 m-8"
           >Naučite nove vještine, usavršite svoje talente i uživajte u kreativnom okruženju. Upis je
           otvoren!</span
@@ -60,7 +60,7 @@ onUnmounted(() => {
             <img
               :src="image.src"
               :alt="image.alt"
-              class="aspect-[16/9] absolute w-full h-auto"
+              class="aspect-[16/9] absolute w-full h-full object-cover"
               v-if="index === currentSliderIndex"
             />
           </transition>
