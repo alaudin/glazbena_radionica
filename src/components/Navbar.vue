@@ -1,20 +1,12 @@
 <script setup>
 import logo from '@/assets/img/icon-removebg.png'
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-} from '@headlessui/vue'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
-import { RouterLink, useRoute } from 'vue-router'
+import { Disclosure, DisclosureButton, DisclosurePanel, Menu } from '@headlessui/vue'
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { RouterLink } from 'vue-router'
 import router from '@/router'
 
 const navigation = [
-  { name: 'Upis', to: '/upis', current: true },
+  { name: 'Upis', to: '/upis', current: false },
   { name: 'Odsjeci', to: '/odsjeci', current: false },
   { name: 'Cijene', to: '/cijene', current: false },
   { name: 'O nama', to: '/about', current: false },
@@ -47,7 +39,7 @@ const enterPass = () => {
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <RouterLink to="/" class="flex shrink-0 items-center">
             <img class="h-8 w-12 bg-white rounded-md px-2 mx-2" :src="logo" alt="logo" />
-            <span class="font-bold text-white text-2xl">Glazbena radionica</span>
+            <span class="font-bold text-white text-xl text-wrap">Glazbena radionica</span>
           </RouterLink>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex">
@@ -55,13 +47,9 @@ const enterPass = () => {
                 v-for="item in navigation"
                 :key="item.name"
                 :to="item.to"
-                :class="[
-                  item.current
-                    ? 'bg-gray-900 text-white'
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                  'rounded-md px-3 py-2 text-sm font-medium text-nowrap',
-                ]"
-                :aria-current="item.current ? 'page' : undefined"
+                class="rounded-md px-3 py-2 text-sm font-medium text-nowrap text-gray-300 hover:bg-gray-700 hover:text-white"
+                active-class="bg-gray-900 text-white"
+                exact-active-class="bg-gray-900 text-white"
                 >{{ item.name }}</RouterLink
               >
             </div>
@@ -95,25 +83,6 @@ const enterPass = () => {
                 </svg>
               </button>
             </div>
-            <!-- <transition
-              enter-active-class="transition ease-out duration-100"
-              enter-from-class="transform opacity-0 scale-95"
-              enter-to-class="transform opacity-100 scale-100"
-              leave-active-class="transition ease-in duration-75"
-              leave-from-class="transform opacity-100 scale-100"
-              leave-to-class="transform opacity-0 scale-95"
-            >
-              <MenuItems
-                class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 focus:outline-hidden"
-              >
-                <MenuItem>
-                  <input type="password" placeholder="Enter password:" />
-                </MenuItem>
-                <MenuItem>
-                  <button>Login</button>
-                </MenuItem> -
-              </MenuItems>
-            </transition> -->
           </Menu>
         </div>
       </div>
@@ -125,13 +94,9 @@ const enterPass = () => {
           v-for="item in navigation"
           :key="item.name"
           :to="item.to"
-          :class="[
-            item.current
-              ? 'bg-gray-900 text-white'
-              : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-            'block rounded-md px-3 py-2 text-base font-medium',
-          ]"
-          :aria-current="item.current ? 'page' : undefined"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+          active-class="bg-gray-900 text-white"
+          exact-active-class="bg-gray-900 text-white"
           @click="close"
           >{{ item.name }}</RouterLink
         >

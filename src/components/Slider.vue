@@ -70,7 +70,7 @@ onUnmounted(() => {
         <div class="absolute bottom-0 flex h-24 w-full justify-center items-center">
           <ol class="z-50 flex w-4/12 justify-center">
             <li
-              v-for="(image, index) in images"
+              v-for="index in images"
               :key="index"
               :class="
                 index === currentSliderIndex
