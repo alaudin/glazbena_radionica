@@ -5,6 +5,7 @@ import AddView from '@/views/AddView.vue'
 import OdsjeciView from '@/views/OdsjeciView.vue'
 import PriceView from '@/views/PriceView.vue'
 import AboutView from '@/views/AboutView.vue'
+import AdminView from '@/views/AdminView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: AboutView,
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: AdminView,
     },
   ],
 })
