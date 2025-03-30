@@ -66,7 +66,7 @@
                   clip-rule="evenodd"
                 ></path>
               </svg>
-              <span>Team size: <span class="font-semibold">Učestvovanje na koncertima</span></span>
+              <span>Učestvovanje na koncertima</span>
             </li>
           </ul>
         </div>
