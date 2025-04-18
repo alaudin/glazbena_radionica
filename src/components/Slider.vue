@@ -1,8 +1,8 @@
 <script setup>
 import { ref, onUnmounted } from 'vue'
-import solf from '@/assets/img/slider/solf.jpg'
-import guitar from '@/assets/img/slider/guitar_1280.jpg'
-import piano from '@/assets/img/slider/piano_1280.jpg'
+import solf from '/img/slider/solf.jpg'
+import guitar from '/img/slider/guitar_1280.jpg'
+import piano from '/img/slider/piano_1280.jpg'
 import { RouterLink } from 'vue-router'
 
 const images = [

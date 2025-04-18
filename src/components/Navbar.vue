@@ -1,5 +1,5 @@
 <script setup>
-import logo from '@/assets/img/icon-removebg.png'
+import logo from '/img/icon-removebg.png'
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { RouterLink } from 'vue-router'
@@ -58,7 +58,7 @@ const enterPass = () => {
         <div
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
         >
-          <!-- Profile dropdown -->
+          <!-- Admin Login Button -->
           <Menu as="div" class="relative ml-3">
             <div>
               <button
