@@ -17,7 +17,7 @@ defineProps({
   <div class="w-full lg:max-w-full lg:flex mt-6">
     <div
       class="max-w-sm h-80 lg:h-auto lg:w-60 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-      style="background-image: url()"
+      :style="{ backgroundImage: url('${path}') }"
       title="profesor"
     ></div>
     <div class="p-4 flex flex-col justify-between leading-normal">
