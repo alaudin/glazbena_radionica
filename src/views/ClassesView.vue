@@ -10,7 +10,7 @@ import klavir from '/img/music.jpg'
       Instrumenti
     </h1>
 
-    <ClassCard instrument="Gitara" :picture="/img/guitar.jpg" />
+    <ClassCard instrument="Gitara" picture="/img/guitar.jpg" />
     <ClassCard instrument="Harmonika" picture="harmonika" />
     <ClassCard instrument="Klavir" picture="$klavir" />
     <ClassCard instrument="Violina" picture="$violina" />
