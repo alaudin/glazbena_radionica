@@ -28,8 +28,8 @@ import employee2 from '/img/user2.png'
   <section class="max-w-7xl p-2 m-auto mt-8">
     <h1 class="ml-4 lg:ml-6 mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Osoblje</h1>
 
-    <EmployeeCard name="Alaudin Hujdur" :path="employee1" />
-    <EmployeeCard name="Neko Drugi" :path="employee2" />
+    <EmployeeCard name="Alaudin Hujdur" :image="employee1" />
+    <EmployeeCard name="Neko Drugi" :image="employee2" />
   </section>
   <Location />
 </template>
