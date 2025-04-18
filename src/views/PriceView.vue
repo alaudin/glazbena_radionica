@@ -70,7 +70,7 @@
             </li>
           </ul>
         </div>
-        <!-- Pricing Card -->
+        <!-- Price Card -->
         <div
           class="flex flex-col p-6 mx-auto max-w-2xl text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow-2xl"
         >
