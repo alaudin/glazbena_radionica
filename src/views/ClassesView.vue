@@ -1,6 +1,5 @@
 <script setup>
 import ClassCard from '@/components/ClassCard.vue'
-import gitara from '/img/guitar.jpg'
 import harmonika from '/img/harmonica.jpg'
 import violina from '/img/violin.jpg'
 import klavir from '/img/music.jpg'
@@ -11,7 +10,7 @@ import klavir from '/img/music.jpg'
       Instrumenti
     </h1>
 
-    <ClassCard instrument="Gitara" picture="$gitara" />
+    <ClassCard instrument="Gitara" picture="/img/guitar.jpg" />
     <ClassCard instrument="Harmonika" picture="$harmonika" />
     <ClassCard instrument="Klavir" picture="$klavir" />
     <ClassCard instrument="Violina" picture="$violina" />
